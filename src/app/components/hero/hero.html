@@ -327,68 +327,27 @@
           </div>
         </div>
 
-        <!-- 9. QR Code Location Showcase -->
-        <div class="card-qr-section" appScrollReveal [revealDelay]="0.5">
-          <div class="qr-frame-gold">
-            <img src="location.jpeg" alt="QR Code اللوكيشن" class="qr-image" />
-            <div class="qr-pin-badge">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="#c8963e">
-                <path
-                  d="M12 2 C8.13 2 5 5.13 5 9 C5 14.25 12 22 12 22 C12 22 19 14.25 19 9 C19 5.13 15.87 2 12 2 Z M12 11.5 C10.62 11.5 9.5 10.38 9.5 9 C9.5 7.62 10.62 6.5 12 6.5 C13.38 6.5 14.5 7.62 14.5 9 C14.5 10.38 13.38 11.5 12 11.5 Z"
-                />
-              </svg>
+        <!-- 9. Parents Honor Showcase (مكان السكان) -->
+        <div class="card-parents-section" appScrollReveal [revealDelay]="0.5">
+          <div class="parents-grid-royal">
+            <!-- Groom's Father -->
+            <div class="parent-box parent-box-groom">
+              <span class="parent-title-tag">والد العريس</span>
+              <p class="parent-name-text">{{ config.groomFather }}</p>
             </div>
-          </div>
 
-          <!-- Premium Gold Laurel Label -->
-          <div class="qr-scan-label-wrapper">
-            <svg
-              class="gold-botanical-branch branch-mini branch-left"
-              viewBox="0 0 70 26"
-              width="32"
-              height="12"
-              fill="none"
-            >
-              <path
-                d="M 66,13 C 45,13 25,12 5,13"
-                stroke="url(#goldGradBranch)"
-                stroke-width="1.4"
-                stroke-linecap="round"
-              />
-              <g fill="url(#goldGradBranch)">
-                <path d="M 6.0,13.0 Q 3.2,10.6 0.5,13.0 Q 3.2,15.4 6.0,13.0 Z" />
-                <path d="M 15.0,12.8 Q 13.6,6.5 7.5,4.5 Q 8.9,10.8 15.0,12.8 Z" />
-                <path d="M 24.0,13.0 Q 17.9,15.1 17.0,21.5 Q 23.1,19.4 24.0,13.0 Z" />
-                <path d="M 33.0,12.8 Q 31.9,6.1 25.5,3.8 Q 26.6,10.5 33.0,12.8 Z" />
-                <path d="M 42.0,13.0 Q 35.6,15.4 35.0,22.2 Q 41.4,19.8 42.0,13.0 Z" />
-                <path d="M 51.0,12.8 Q 49.9,6.2 43.5,4.2 Q 44.6,10.8 51.0,12.8 Z" />
-                <path d="M 60.0,13.0 Q 53.8,15.3 53.0,21.8 Q 59.2,19.5 60.0,13.0 Z" />
-              </g>
-            </svg>
-            <span class="qr-scan-text">SCAN FOR LOCATION</span>
-            <svg
-              class="gold-botanical-branch branch-mini branch-right"
-              viewBox="0 0 70 26"
-              width="32"
-              height="12"
-              fill="none"
-            >
-              <path
-                d="M 4,13 C 25,13 45,12 65,13"
-                stroke="url(#goldGradBranch)"
-                stroke-width="1.4"
-                stroke-linecap="round"
-              />
-              <g fill="url(#goldGradBranch)">
-                <path d="M 64.0,13.0 Q 66.8,10.6 69.5,13.0 Q 66.8,15.4 64.0,13.0 Z" />
-                <path d="M 55.0,12.8 Q 56.4,6.5 62.5,4.5 Q 61.1,10.8 55.0,12.8 Z" />
-                <path d="M 46.0,13.0 Q 52.1,15.1 53.0,21.5 Q 46.9,19.4 46.0,13.0 Z" />
-                <path d="M 37.0,12.8 Q 38.1,6.1 44.5,3.8 Q 43.4,10.5 37.0,12.8 Z" />
-                <path d="M 28.0,13.0 Q 34.4,15.4 35.0,22.2 Q 28.6,19.8 28.0,13.0 Z" />
-                <path d="M 19.0,12.8 Q 20.1,6.2 26.5,4.2 Q 25.4,10.8 19.0,12.8 Z" />
-                <path d="M 10.0,13.0 Q 16.2,15.3 17.0,21.8 Q 10.8,19.5 10.0,13.0 Z" />
-              </g>
-            </svg>
+            <!-- Central Mini Gold Emblem -->
+            <div class="parents-center-emblem">
+              <span class="emblem-line"></span>
+              <span class="emblem-heart">♡</span>
+              <span class="emblem-line"></span>
+            </div>
+
+            <!-- Bride's Father -->
+            <div class="parent-box parent-box-bride">
+              <span class="parent-title-tag">والد العروسة</span>
+              <p class="parent-name-text">{{ config.brideFather }}</p>
+            </div>
           </div>
 
           <div class="gold-heart-divider">
