@@ -4,165 +4,434 @@
 
 .hero-section {
   position: relative;
-  padding: 4rem 0 3rem;
-  min-height: 90vh;
+  width: 100%;
+  padding: clamp(1rem, 3vw, 2.5rem) clamp(0.5rem, 2vw, 1.5rem);
   display: flex;
+  justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
-/* Corner Ornaments */
-.ornament {
-  position: absolute;
-  width: clamp(50px, 10vw, 80px);
-  height: clamp(50px, 10vw, 80px);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.ornament-top-left {
-  top: 1rem;
-  left: 1rem;
-}
-.ornament-top-right {
-  top: 1rem;
-  right: 1rem;
-}
-.ornament-bottom-left {
-  bottom: 1rem;
-  left: 1rem;
-}
-.ornament-bottom-right {
-  bottom: 1rem;
-  right: 1rem;
-}
-
-/* Hero Content */
-.hero-content {
+/* Outer Wrapper for Botanical Flowers and Arched Card */
+.botanical-card-wrapper {
   position: relative;
-  z-index: 2;
-  max-width: 700px;
+  width: min(94vw, 640px);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  border-radius: 300px 300px 24px 24px / 240px 240px 24px 24px;
+  box-shadow:
+    0 20px 50px rgba(58, 82, 110, 0.12),
+    0 4px 16px rgba(58, 82, 110, 0.06);
 }
 
-.hero-label {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 4vw, 2rem);
-  color: var(--color-primary);
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.03em;
+/* Botanical Corners (4 corners) */
+.botanical-corner {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  width: clamp(100px, 26vw, 175px);
+  height: auto;
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 6px rgba(70, 95, 125, 0.15));
 }
 
-.hero-bismillah {
-  font-family: var(--font-display);
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
-  color: var(--color-text-deep);
-  margin-bottom: 1.5rem;
-  opacity: 0.85;
+.corner-tl {
+  top: -8px;
+  left: -8px;
 }
 
-.hero-verse-block {
-  background-color: var(--color-card-bg);
-  border: 1px solid var(--color-divider);
-  border-radius: 12px;
-  padding: 1.25rem 1.75rem;
-  margin-bottom: 1.5rem;
+.corner-tr {
+  top: -8px;
+  right: -8px;
 }
 
-.hero-verse {
-  font-family: var(--font-display);
-  font-size: clamp(1rem, 2.8vw, 1.35rem);
-  color: var(--color-secondary);
-  line-height: 1.9;
-  font-weight: 400;
+.corner-bl {
+  bottom: -8px;
+  left: -8px;
 }
 
-/* Dove Divider */
-.dove-divider {
+.corner-br {
+  bottom: -8px;
+  right: -8px;
+}
+
+/* Outer Arch Frame with Gold Hairline Border */
+.card-arch-outer {
+  position: relative;
+  width: 100%;
+  border-radius: 280px 280px 20px 20px / 230px 230px 20px 20px;
+  border: 1.5px solid #d4b47e;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+}
+
+/* Inner Arch Frame with Pale Dusty-Blue Watercolor Fill */
+.card-arch-inner {
+  position: relative;
+  width: 100%;
+  border-radius: 274px 274px 16px 16px / 224px 224px 16px 16px;
+  border: 1px solid rgba(212, 180, 126, 0.45);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.85), transparent 60%),
+    linear-gradient(180deg, #ecf3fa 0%, #e2edf7 45%, #ecf4fa 100%);
+  padding: clamp(3rem, 7vw, 4.8rem) clamp(1rem, 3.5vw, 2.5rem) clamp(2rem, 4.5vw, 3rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 1. Gold Calligraphy Basmala */
+.card-basmala-wrap {
+  margin-top: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.gold-calligraphy-basmala {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: clamp(1.8rem, 5.2vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  background: linear-gradient(135deg, #dfb76c 0%, #f7e6b0 35%, #c8953c 70%, #946313 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(150, 105, 30, 0.2));
+}
+
+/* 2. Heart Divider */
+.gold-heart-divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem 0;
+  gap: 12px;
+  width: 100%;
+  max-width: 220px;
+  margin: 0.6rem auto;
 }
 
 .divider-line {
-  display: block;
-  width: 60px;
+  flex: 1;
   height: 1px;
-  background-color: var(--color-divider);
+  background: linear-gradient(90deg, transparent, #d4b47e, transparent);
 }
 
-.dove-divider-img {
-  width: 42px;
-  height: auto;
-  flex-shrink: 0;
-  filter: drop-shadow(0 2px 4px rgba(59, 42, 30, 0.15));
+.divider-heart {
+  color: #c8963e;
+  font-size: 0.85rem;
+  font-style: normal;
 }
 
-/* Intro text */
-.hero-intro {
+/* 3. Greeting 1: فرحنا هيكمل بيكم */
+.card-greeting-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0.4rem 0;
+}
+
+.card-phrase-primary {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 2.8vw, 1.2rem);
-  color: var(--color-text-deep);
-  margin-bottom: 1rem;
+  font-size: clamp(1.15rem, 3.4vw, 1.45rem);
+  font-weight: 700;
+  color: #38526d;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.leaf-flourish {
+  color: #c8963e;
+  font-size: 1.1rem;
   opacity: 0.85;
 }
 
-/* Names */
-.hero-names {
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 7vw, 4rem);
-  color: var(--color-primary);
-  margin: 0.5rem 0 1rem;
-  line-height: 1.2;
+/* 5. Centerpiece: مصطفى & أروى in 3D Gold Calligraphy */
+.card-names-wrap {
+  margin: 0.8rem 0;
+  width: 100%;
 }
 
-.love-rings-wrapper {
+.card-names-gold {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: clamp(2.6rem, 8.5vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0.4rem;
-  vertical-align: middle;
-  filter: drop-shadow(0 2px 6px rgba(201, 146, 43, 0.35));
-  animation: gentleLoveGlow 3s ease-in-out infinite alternate;
+  gap: clamp(8px, 2vw, 16px);
+  direction: rtl;
+  background: linear-gradient(135deg, #dfb76c 0%, #f7e6b0 35%, #c8953c 65%, #946313 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 5px rgba(140, 95, 30, 0.28));
 }
 
-@keyframes gentleLoveGlow {
-  0% {
-    transform: scale(1);
-    filter: drop-shadow(0 2px 6px rgba(201, 146, 43, 0.3));
-  }
-  100% {
-    transform: scale(1.06);
-    filter: drop-shadow(0 4px 12px rgba(201, 146, 43, 0.55));
-  }
+.name-text {
+  display: inline-block;
+  white-space: nowrap;
 }
 
-/* Subline */
-.hero-subline {
+.gold-ampersand {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #c8963e;
+  margin: 0 4px;
+}
+
+/* 6. Royal Filigree Divider */
+.royal-filigree-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0.4rem 0;
+  color: #c8963e;
+}
+
+.filigree-flourish {
+  font-size: 1.3rem;
+  opacity: 0.85;
+}
+
+/* 7. Greeting 2: مستنينكم تنورونا */
+.card-greeting-sub {
+  margin: 0.4rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-phrase-secondary {
   font-family: var(--font-body);
-  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-  color: var(--color-text-deep);
-  opacity: 0.75;
-  max-width: 500px;
-  margin: 0 auto;
-  line-height: 1.8;
+  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-weight: 600;
+  color: #4a6682;
+  margin: 0;
 }
 
-/* Responsive */
+.tiny-leaf-flourish {
+  color: #c8963e;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* 8. Event Details 3-Pill Trio Grid */
+.card-details-trio {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 480px;
+  margin: 1.2rem auto;
+  direction: ltr;
+}
+
+.trio-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3px;
+}
+
+.trio-icon {
+  color: #c8963e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.trio-val {
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 2.4vw, 0.98rem);
+  font-weight: 700;
+  color: #2c4257;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.venue-title {
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.trio-subval {
+  font-family: var(--font-body);
+  font-size: clamp(0.72rem, 2vw, 0.82rem);
+  font-weight: 600;
+  color: #5c7b9b;
+  margin: 0;
+}
+
+.trio-sub-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #d4b47e;
+  font-size: 0.65rem;
+  margin-top: 2px;
+}
+
+.trio-sub-divider i {
+  color: #c8963e;
+  font-style: normal;
+}
+
+.trio-separator {
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(180deg, transparent, rgba(212, 180, 126, 0.5), transparent);
+  margin: 0 4px;
+}
+
+/* 9. QR Code Location Section */
+.card-qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.2rem;
+  width: 100%;
+}
+
+.qr-frame-gold {
+  position: relative;
+  width: clamp(110px, 25vw, 135px);
+  height: clamp(110px, 25vw, 135px);
+  border-radius: 12px;
+  border: 1.5px solid #d4b47e;
+  padding: 6px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(50, 75, 105, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.qr-pin-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #d4b47e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.qr-scan-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.72rem, 2vw, 0.85rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #c8963e;
+  margin: 0.6rem 0 0.2rem;
+}
+
+/* Direct Location Actions */
+.location-actions-row {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-maps-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 24px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff, #f2f7fb);
+  border: 1.5px solid #d4b47e;
+  color: #38526d;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(50, 75, 105, 0.1);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.btn-maps-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(50, 75, 105, 0.18);
+  border-color: #c8963e;
+  color: #2c4257;
+}
+
+/* Responsive Mobile Adaptations */
 @media (max-width: 480px) {
-  .hero-section {
-    padding: 2.5rem 0 2rem;
-    min-height: auto;
+  .botanical-card-wrapper {
+    width: 95vw;
+    border-radius: 220px 220px 18px 18px / 180px 180px 18px 18px;
   }
 
-  .hero-verse-block {
-    padding: 1rem 1.25rem;
+  .card-arch-outer {
+    border-radius: 210px 210px 16px 16px / 170px 170px 16px 16px;
+    padding: 4px;
   }
 
-  .divider-line {
-    width: 40px;
+  .card-arch-inner {
+    border-radius: 206px 206px 14px 14px / 166px 166px 14px 14px;
+    padding: 2.8rem 0.75rem 2rem;
+  }
+
+  .botanical-corner {
+    width: 95px;
+  }
+
+  .gold-calligraphy-basmala {
+    font-size: 1.75rem;
+  }
+
+  .card-names-gold {
+    font-size: 2.3rem;
+    gap: 8px;
+  }
+
+  .card-phrase-primary {
+    font-size: 1.1rem;
+  }
+
+  .card-phrase-secondary {
+    font-size: 0.98rem;
+  }
+
+  .card-details-trio {
+    margin: 1rem 0;
+  }
+
+  .trio-val {
+    font-size: 0.82rem;
+  }
+
+  .trio-subval {
+    font-size: 0.7rem;
   }
 }

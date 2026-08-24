@@ -4,15 +4,17 @@
 /* ===== Wedding Design System — Solid Colors Only ===== */
 
 :root {
-  /* Color Palette — zero gradients */
-  --color-bg: #FBF3E7;
-  --color-primary: #C1652F;
-  --color-secondary: #6B7A3A;
-  --color-text-deep: #3B2A1E;
-  --color-highlight: #C9922B;
-  --color-card-bg: #FFF9F0;
-  --color-divider: #D8C7A8;
-  --color-white: #FFFFFF;
+  /* Dusty Blue & Royal Gold Wedding Palette */
+  --color-bg: #f2f6fa;
+  --color-primary: #38526d;
+  --color-secondary: #5c7b9b;
+  --color-text-deep: #2c4257;
+  --color-highlight: #c8963e;
+  --color-gold-light: #f7e6c4;
+  --color-card-bg: #ffffff;
+  --color-arch-bg: #eaf1f8;
+  --color-divider: #d4b47e;
+  --color-white: #ffffff;
 
   /* Typography */
   --font-display: 'Aref Ruqaa', serif;

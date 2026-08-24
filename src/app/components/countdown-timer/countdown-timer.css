@@ -47,12 +47,12 @@
   align-items: center;
   justify-content: center;
   gap: clamp(6px, 2vw, 16px);
-  background: linear-gradient(145deg, rgba(255, 253, 249, 0.94), rgba(247, 240, 229, 0.88));
-  border: 1px solid rgba(184, 141, 73, 0.25);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(235, 244, 252, 0.9));
+  border: 1px solid rgba(212, 180, 126, 0.38);
   border-radius: 28px;
   padding: clamp(14px, 3vh, 22px) clamp(12px, 3vw, 28px);
   box-shadow:
-    0 16px 40px rgba(76, 63, 44, 0.08),
+    0 16px 40px rgba(50, 75, 105, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
 }
@@ -65,14 +65,14 @@
   min-width: clamp(52px, 14vw, 84px);
   padding: 8px 4px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(184, 141, 73, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(212, 180, 126, 0.2);
   transition: transform 0.25s ease;
 }
 
 .countdown-unit:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffffff;
 }
 
 .countdown-num {
@@ -80,7 +80,7 @@
   font-size: clamp(1.6rem, 5vw, 2.6rem);
   font-weight: 700;
   line-height: 1;
-  color: #5f6d59; /* Sage green / deep bronze */
+  color: #38526d;
   letter-spacing: 0.02em;
 }
 
@@ -88,7 +88,7 @@
   font-family: var(--font-display);
   font-size: clamp(0.78rem, 2vw, 0.95rem);
   font-weight: 700;
-  color: #8a6038;
+  color: #c8963e;
   margin-top: 6px;
 }
 
@@ -96,7 +96,7 @@
   font-family: 'Cinzel', serif;
   font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   font-weight: 700;
-  color: rgba(184, 141, 73, 0.5);
+  color: rgba(200, 150, 62, 0.5);
   line-height: 1;
   user-select: none;
 }

@@ -1,130 +1,207 @@
 <section class="hero-section">
-  <!-- Corner Ornaments -->
-  <div class="ornament ornament-top-left" #ornamentTL>
-    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5,75 Q5,5 75,5" fill="none" stroke="#6B7A3A" stroke-width="1.2" opacity="0.6" />
-      <path d="M10,65 Q10,15 60,15" fill="none" stroke="#6B7A3A" stroke-width="0.8" opacity="0.4" />
-      <circle cx="18" cy="18" r="3" fill="#6B7A3A" opacity="0.3" />
-      <path d="M8,30 Q12,20 22,18" fill="none" stroke="#6B7A3A" stroke-width="0.6" opacity="0.4" />
-      <ellipse
-        cx="12"
-        cy="25"
-        rx="4"
-        ry="2"
-        fill="#6B7A3A"
-        opacity="0.2"
-        transform="rotate(-40 12 25)"
-      />
-    </svg>
-  </div>
-  <div class="ornament ornament-top-right" #ornamentTR>
-    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <path d="M75,75 Q75,5 5,5" fill="none" stroke="#6B7A3A" stroke-width="1.2" opacity="0.6" />
-      <path d="M70,65 Q70,15 20,15" fill="none" stroke="#6B7A3A" stroke-width="0.8" opacity="0.4" />
-      <circle cx="62" cy="18" r="3" fill="#6B7A3A" opacity="0.3" />
-      <path d="M72,30 Q68,20 58,18" fill="none" stroke="#6B7A3A" stroke-width="0.6" opacity="0.4" />
-      <ellipse
-        cx="68"
-        cy="25"
-        rx="4"
-        ry="2"
-        fill="#6B7A3A"
-        opacity="0.2"
-        transform="rotate(40 68 25)"
-      />
-    </svg>
-  </div>
-  <div class="ornament ornament-bottom-left" #ornamentBL>
-    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5,5 Q5,75 75,75" fill="none" stroke="#6B7A3A" stroke-width="1.2" opacity="0.6" />
-      <path d="M10,15 Q10,65 60,65" fill="none" stroke="#6B7A3A" stroke-width="0.8" opacity="0.4" />
-    </svg>
-  </div>
-  <div class="ornament ornament-bottom-right" #ornamentBR>
-    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <path d="M75,5 Q75,75 5,75" fill="none" stroke="#6B7A3A" stroke-width="1.2" opacity="0.6" />
-      <path d="M70,15 Q70,65 20,65" fill="none" stroke="#6B7A3A" stroke-width="0.8" opacity="0.4" />
-    </svg>
-  </div>
+  <!-- Royal Dusty-Blue & Gold Botanical Card Container -->
+  <div class="botanical-card-wrapper" appScrollReveal>
+    <!-- Botanical Corner Art (4 Corners) -->
+    <img
+      src="images/botanical_tl_trans.png"
+      alt=""
+      class="botanical-corner corner-tl"
+      aria-hidden="true"
+    />
+    <img
+      src="images/botanical_tr_trans.png"
+      alt=""
+      class="botanical-corner corner-tr"
+      aria-hidden="true"
+    />
+    <img
+      src="images/botanical_bl_trans.png"
+      alt=""
+      class="botanical-corner corner-bl"
+      aria-hidden="true"
+    />
+    <img
+      src="images/botanical_br_trans.png"
+      alt=""
+      class="botanical-corner corner-br"
+      aria-hidden="true"
+    />
 
-  <!-- Content -->
-  <div class="container">
-    <div class="hero-content text-center">
-      <p class="hero-label" appScrollReveal>{{ config.invitationTitle }}</p>
+    <!-- Outer Double Hairline Gold Arch Frame -->
+    <div class="card-arch-outer">
+      <div class="card-arch-inner">
+        <!-- 1. Gold Calligraphic Basmala -->
+        <div class="card-basmala-wrap" appScrollReveal [revealDelay]="0.1">
+          <p class="gold-calligraphy-basmala">{{ config.bismillah }}</p>
+        </div>
 
-      <p class="hero-bismillah" appScrollReveal [revealDelay]="0.1">{{ config.bismillah }}</p>
+        <!-- 2. Delicate Heart Divider -->
+        <div class="gold-heart-divider" appScrollReveal [revealDelay]="0.15">
+          <span class="divider-line"></span>
+          <span class="divider-heart">♡</span>
+          <span class="divider-line"></span>
+        </div>
 
-      <div class="hero-verse-block" appScrollReveal [revealDelay]="0.2">
-        <p class="hero-verse">{{ config.quranVerse }}</p>
+        <!-- 3. Greeting 1: فرحنا هيكمل بيكم -->
+        <div class="card-greeting-block" appScrollReveal [revealDelay]="0.2">
+          <span class="leaf-flourish">❧</span>
+          <h2 class="card-phrase-primary">فرحنا هيكمل بيكم</h2>
+          <span class="leaf-flourish">☙</span>
+        </div>
+
+        <!-- 4. Delicate Heart Divider -->
+        <div class="gold-heart-divider" appScrollReveal [revealDelay]="0.25">
+          <span class="divider-line"></span>
+          <span class="divider-heart">♡</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <!-- 5. Centerpiece: مصطفى & أروى in 3D Gold Calligraphy -->
+        <div class="card-names-wrap" appScrollReveal [revealDelay]="0.3">
+          <h1 class="card-names-gold">
+            <span class="name-text">{{ config.groomName }}</span>
+            <span class="gold-ampersand">&</span>
+            <span class="name-text">{{ config.brideName }}</span>
+          </h1>
+        </div>
+
+        <!-- 6. Royal Filigree Divider -->
+        <div class="royal-filigree-divider" appScrollReveal [revealDelay]="0.35">
+          <span class="filigree-flourish">❧</span>
+          <span class="divider-heart">♡</span>
+          <span class="filigree-flourish">☙</span>
+        </div>
+
+        <!-- 7. Greeting 2: مستنينكم تنورونا -->
+        <div class="card-greeting-sub" appScrollReveal [revealDelay]="0.4">
+          <p class="card-phrase-secondary">مستنينكم تنورونا</p>
+          <div class="tiny-leaf-flourish">🍃</div>
+        </div>
+
+        <!-- 8. Event Details 3-Pill Trio Grid -->
+        <div class="card-details-trio" appScrollReveal [revealDelay]="0.45">
+          <!-- Item 1: Date -->
+          <div class="trio-item">
+            <div class="trio-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="4" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+                <path
+                  d="M12 14.5 C11.5 13.8 10.5 13.8 10 14.5 C9.5 15.2 9.5 16.5 12 18 C14.5 16.5 14.5 15.2 14 14.5 C13.5 13.8 12.5 13.8 12 14.5 Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <p class="trio-val">02/10/2026</p>
+            <div class="trio-sub-divider"><span>—</span> <i>♡</i> <span>—</span></div>
+          </div>
+
+          <div class="trio-separator"></div>
+
+          <!-- Item 2: Time -->
+          <div class="trio-item">
+            <div class="trio-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <p class="trio-val">07:30 PM</p>
+            <div class="trio-sub-divider"><span>—</span> <i>♡</i> <span>—</span></div>
+          </div>
+
+          <div class="trio-separator"></div>
+
+          <!-- Item 3: Location -->
+          <div class="trio-item">
+            <div class="trio-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M12 21 C16 16 20 12.5 20 8.5 A8 8 0 0 0 4 8.5 C4 12.5 8 16 12 21 Z" />
+                <path
+                  d="M12 7 C11.5 6.5 10.8 6.5 10.4 7 C10 7.5 10 8.3 12 9.5 C14 8.3 14 7.5 13.6 7 C13.2 6.5 12.5 6.5 12 7 Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <p class="trio-val venue-title">Solitaire View Hall</p>
+            <p class="trio-subval">Corniche El Maadi</p>
+            <div class="trio-sub-divider"><span>—</span> <i>♡</i> <span>—</span></div>
+          </div>
+        </div>
+
+        <!-- 9. QR Code Location Showcase -->
+        <div class="card-qr-section" appScrollReveal [revealDelay]="0.5">
+          <div class="qr-frame-gold">
+            <img src="location.jpeg" alt="QR Code اللوكيشن" class="qr-image" />
+            <div class="qr-pin-badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#c8963e">
+                <path
+                  d="M12 2 C8.13 2 5 5.13 5 9 C5 14.25 12 22 12 22 C12 22 19 14.25 19 9 C19 5.13 15.87 2 12 2 Z M12 11.5 C10.62 11.5 9.5 10.38 9.5 9 C9.5 7.62 10.62 6.5 12 6.5 C13.38 6.5 14.5 7.62 14.5 9 C14.5 10.38 13.38 11.5 12 11.5 Z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <p class="qr-scan-label">
+            <span class="leaf-flourish">❧</span>
+            <span>SCAN FOR LOCATION</span>
+            <span class="leaf-flourish">☙</span>
+          </p>
+
+          <div class="gold-heart-divider">
+            <span class="divider-line"></span>
+            <span class="divider-heart">♡</span>
+            <span class="divider-line"></span>
+          </div>
+
+          <!-- Direct Location Actions -->
+          <div class="location-actions-row">
+            <a
+              [href]="config.locationUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-maps-action"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              <span>فتح في Google Maps</span>
+            </a>
+          </div>
+        </div>
       </div>
-
-      <!-- Dove divider -->
-      <div class="dove-divider" appScrollReveal [revealDelay]="0.3">
-        <span class="divider-line"></span>
-        <img src="images/dove.png" alt="حمامة السلام" class="dove-divider-img" />
-        <span class="divider-line"></span>
-      </div>
-
-      <p class="hero-intro" appScrollReveal [revealDelay]="0.35">{{ config.invitationIntro }}</p>
-
-      <h1 class="hero-names" appScrollReveal [revealDelay]="0.4">
-        <span class="name-part">{{ config.groomName }}</span>
-        <span class="love-rings-wrapper">
-          <svg
-            class="love-rings-svg"
-            viewBox="0 0 38 28"
-            width="38"
-            height="28"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="ringGoldHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#F3D382" />
-                <stop offset="50%" stop-color="#C9922B" />
-                <stop offset="100%" stop-color="#8F6215" />
-              </linearGradient>
-            </defs>
-            <!-- Left Ring -->
-            <ellipse
-              cx="13.5"
-              cy="14.5"
-              rx="8.5"
-              ry="9.5"
-              stroke="url(#ringGoldHero)"
-              stroke-width="2.2"
-              transform="rotate(-15 13.5 14.5)"
-            />
-            <!-- Right Ring Intertwined -->
-            <ellipse
-              cx="24.5"
-              cy="14.5"
-              rx="8.5"
-              ry="9.5"
-              stroke="url(#ringGoldHero)"
-              stroke-width="2.2"
-              transform="rotate(15 24.5 14.5)"
-            />
-            <!-- Diamond Sparkle of Love -->
-            <path
-              d="M19 4 L20.2 7 L23 8 L20.2 9 L19 12 L17.8 9 L15 8 L17.8 7 Z"
-              fill="#FFFDF8"
-              stroke="url(#ringGoldHero)"
-              stroke-width="0.8"
-            />
-            <!-- Romantic Heart in Center -->
-            <path
-              d="M19 12.5 C18.2 11.3 16.5 11.3 15.6 12.3 C14.6 13.5 14.8 15.5 16.8 17.5 C18 18.7 19 19.7 19 19.7 C19 19.7 20 18.7 21.2 17.5 C23.2 15.5 23.4 13.5 22.4 12.3 C21.5 11.3 19.8 11.3 19 12.5 Z"
-              fill="url(#ringGoldHero)"
-            />
-          </svg>
-        </span>
-        <span class="name-part">{{ config.brideName }}</span>
-      </h1>
-
-      <p class="hero-subline" appScrollReveal [revealDelay]="0.55">
-        {{ config.invitationSubline }}
-      </p>
     </div>
   </div>
 </section>
