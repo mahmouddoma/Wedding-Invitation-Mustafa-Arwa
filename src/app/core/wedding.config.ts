@@ -28,7 +28,7 @@ export const WEDDING_CONFIG: WeddingConfig = {
   brideName: 'الدكتورة/ أروى',
   groomFather: 'الأستاذ / أحمد مصطفى سيف النصر',
   brideFather: 'المهندس / أنور محمد عبد المجيد',
-  weddingDate: '2026-10-02T20:00:00',
+  weddingDate: '2026-10-02T19:30:00',
   weddingTime: 'الساعة 7:30 مساءً',
   venueName: 'Solitaire View Maadi',
   locationUrl: 'https://maps.app.goo.gl/CBHDohEnQavvzwNPA?g_st=ac',

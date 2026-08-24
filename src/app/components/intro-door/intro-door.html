@@ -1,4 +1,11 @@
-<section class="door-screen" id="doorScreen" [class.hidden]="isOpen()" aria-label="فتح الدعوة">
+<section
+  class="door-screen"
+  id="doorScreen"
+  [class.hidden]="isOpen()"
+  (click)="onScreenClick()"
+  (touchstart)="onScreenClick()"
+  aria-label="فتح الدعوة"
+>
   <!-- Top Controls -->
   <header class="top-controls">
     <button

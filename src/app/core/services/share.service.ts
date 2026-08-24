@@ -28,7 +28,7 @@ export class ShareService {
 
   /** Get the share text */
   private getShareText(): string {
-    return `دعوة زفاف ${WEDDING_CONFIG.groomName} ❦ ${WEDDING_CONFIG.brideName} — الجمعة 2 أكتوبر 2026 الساعة 8 مساءً`;
+    return `دعوة زفاف ${WEDDING_CONFIG.groomName} ♡ ${WEDDING_CONFIG.brideName} — الجمعة 2 أكتوبر 2026 الساعة 7:30 مساءً`;
   }
 
   /** Native Web Share API */
