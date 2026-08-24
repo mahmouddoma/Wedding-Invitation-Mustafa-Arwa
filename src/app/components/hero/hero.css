@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-/* Outer Wrapper for Botanical Flowers and Arched Card */
+/* Botanical Flowers and Arched Card */
 .botanical-card-wrapper {
   position: relative;
   width: min(94vw, 640px);
@@ -22,7 +22,7 @@
     0 4px 16px rgba(58, 82, 110, 0.06);
 }
 
-/* Botanical Corners (4 corners - positioned strictly on the outer perimeter) */
+/* Botanical Corners */
 .botanical-corner {
   position: absolute;
   pointer-events: none;
@@ -197,7 +197,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .card-phrase-secondary {
@@ -208,8 +208,9 @@
   margin: 0;
 }
 
-.gold-olive-branch {
-  margin-top: 2px;
+.mini-divider {
+  max-width: 140px;
+  margin: 0.3rem auto 0.4rem;
 }
 
 /* 8. Event Details 3-Pill Trio Grid */
