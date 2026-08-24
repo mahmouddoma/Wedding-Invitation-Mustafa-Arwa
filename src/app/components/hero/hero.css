@@ -22,35 +22,35 @@
     0 4px 16px rgba(58, 82, 110, 0.06);
 }
 
-/* Botanical Corners (4 corners) */
+/* Botanical Corners (4 corners - positioned strictly on the outer perimeter) */
 .botanical-corner {
   position: absolute;
   pointer-events: none;
   z-index: 10;
-  width: clamp(100px, 26vw, 175px);
+  width: clamp(70px, 16vw, 120px);
   height: auto;
-  opacity: 0.95;
-  filter: drop-shadow(0 2px 6px rgba(70, 95, 125, 0.15));
+  opacity: 0.92;
+  filter: drop-shadow(0 2px 4px rgba(70, 95, 125, 0.1));
 }
 
 .corner-tl {
-  top: -8px;
-  left: -8px;
+  top: -4px;
+  left: -4px;
 }
 
 .corner-tr {
-  top: -8px;
-  right: -8px;
+  top: -4px;
+  right: -4px;
 }
 
 .corner-bl {
-  bottom: -8px;
-  left: -8px;
+  bottom: -4px;
+  left: -4px;
 }
 
 .corner-br {
-  bottom: -8px;
-  right: -8px;
+  bottom: -4px;
+  right: -4px;
 }
 
 /* Outer Arch Frame with Gold Hairline Border */
@@ -60,7 +60,7 @@
   border-radius: 280px 280px 20px 20px / 230px 230px 20px 20px;
   border: 1.5px solid #d4b47e;
   padding: 6px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   box-sizing: border-box;
 }
 
@@ -71,9 +71,9 @@
   border-radius: 274px 274px 16px 16px / 224px 224px 16px 16px;
   border: 1px solid rgba(212, 180, 126, 0.45);
   background:
-    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.85), transparent 60%),
-    linear-gradient(180deg, #ecf3fa 0%, #e2edf7 45%, #ecf4fa 100%);
-  padding: clamp(3rem, 7vw, 4.8rem) clamp(1rem, 3.5vw, 2.5rem) clamp(2rem, 4.5vw, 3rem);
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.95), transparent 60%),
+    linear-gradient(180deg, #edf4fa 0%, #e2edf7 45%, #ecf4fa 100%);
+  padding: clamp(3rem, 7vw, 4.6rem) clamp(1rem, 3.5vw, 2.5rem) clamp(2rem, 4.5vw, 3rem);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@
 
 .gold-calligraphy-basmala {
   font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(1.8rem, 5.2vw, 2.8rem);
+  font-size: clamp(1.8rem, 5.2vw, 2.7rem);
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
@@ -104,10 +104,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
   max-width: 220px;
-  margin: 0.6rem auto;
+  margin: 0.5rem auto;
 }
 
 .divider-line {
@@ -116,10 +116,9 @@
   background: linear-gradient(90deg, transparent, #d4b47e, transparent);
 }
 
-.divider-heart {
-  color: #c8963e;
-  font-size: 0.85rem;
-  font-style: normal;
+.gold-heart-svg {
+  flex-shrink: 0;
+  display: block;
 }
 
 /* 3. Greeting 1: فرحنا هيكمل بيكم */
@@ -128,7 +127,11 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 0.4rem 0;
+  margin: 0.35rem 0;
+}
+
+.gold-laurel-sprig {
+  flex-shrink: 0;
 }
 
 .card-phrase-primary {
@@ -140,15 +143,9 @@
   letter-spacing: 0.02em;
 }
 
-.leaf-flourish {
-  color: #c8963e;
-  font-size: 1.1rem;
-  opacity: 0.85;
-}
-
 /* 5. Centerpiece: مصطفى & أروى in 3D Gold Calligraphy */
 .card-names-wrap {
-  margin: 0.8rem 0;
+  margin: 0.6rem 0;
   width: 100%;
 }
 
@@ -187,19 +184,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   margin: 0.4rem 0;
-  color: #c8963e;
 }
 
-.filigree-flourish {
-  font-size: 1.3rem;
-  opacity: 0.85;
+.filigree-flourish-svg {
+  display: block;
 }
 
 /* 7. Greeting 2: مستنينكم تنورونا */
 .card-greeting-sub {
-  margin: 0.4rem 0 1rem;
+  margin: 0.3rem 0 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,16 +202,14 @@
 
 .card-phrase-secondary {
   font-family: var(--font-body);
-  font-size: clamp(1.05rem, 3vw, 1.3rem);
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
   font-weight: 600;
   color: #4a6682;
   margin: 0;
 }
 
-.tiny-leaf-flourish {
-  color: #c8963e;
-  font-size: 0.95rem;
-  opacity: 0.8;
+.gold-olive-branch {
+  margin-top: 2px;
 }
 
 /* 8. Event Details 3-Pill Trio Grid */
@@ -238,7 +230,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 3px;
+  gap: 4px;
 }
 
 .trio-icon {
@@ -247,6 +239,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 2px;
+  transition: transform 0.25s ease;
+}
+
+.trio-item:hover .trio-icon {
+  transform: translateY(-2px);
 }
 
 .trio-val {
@@ -276,14 +273,13 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  color: #d4b47e;
-  font-size: 0.65rem;
   margin-top: 2px;
 }
 
-.trio-sub-divider i {
-  color: #c8963e;
-  font-style: normal;
+.sub-dash {
+  width: 12px;
+  height: 1px;
+  background: #d4b47e;
 }
 
 .trio-separator {
@@ -339,17 +335,24 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.qr-scan-label {
+.qr-scan-label-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  margin: 0.6rem 0 0.2rem;
+}
+
+.gold-laurel-mini {
+  flex-shrink: 0;
+}
+
+.qr-scan-text {
   font-family: 'Cinzel', serif;
   font-size: clamp(0.72rem, 2vw, 0.85rem);
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #c8963e;
-  margin: 0.6rem 0 0.2rem;
 }
 
 /* Direct Location Actions */
@@ -403,7 +406,7 @@
   }
 
   .botanical-corner {
-    width: 95px;
+    width: 70px;
   }
 
   .gold-calligraphy-basmala {
