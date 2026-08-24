@@ -163,40 +163,45 @@
 .card-names-wrap {
   margin: 0.6rem 0;
   width: 100%;
+  overflow: visible;
 }
 
 .card-names-gold {
-  font-family: 'Aref Ruqaa Ink', 'Aref Ruqaa', 'Amiri Quran', serif;
-  font-size: clamp(2.5rem, 8vw, 4.3rem);
+  font-family: 'Amiri', 'Amiri Quran', serif;
+  font-size: clamp(2.6rem, 8.2vw, 4.4rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.45;
   margin: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(8px, 2.2vw, 18px);
+  gap: clamp(10px, 2.5vw, 22px);
   direction: rtl;
+  padding: 4px 14px;
+  overflow: visible;
 }
 
 .name-text {
   display: inline-block;
   white-space: nowrap;
-  background: linear-gradient(180deg, #e8b350 0%, #c48922 35%, #eab856 70%, #915d0e 100%);
+  color: #b87d18;
+  background: linear-gradient(180deg, #e5aa3a 0%, #bd8019 45%, #945f0d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 4px rgba(100, 68, 16, 0.35));
+  overflow: visible;
+  padding: 0 4px;
 }
 
 .name-bride {
-  /* High contrast rich gold for أروى ensuring 100% crisp legibility */
-  background: linear-gradient(180deg, #e8b350 0%, #c48922 35%, #eab856 70%, #915d0e 100%);
+  background: linear-gradient(180deg, #e5aa3a 0%, #bd8019 45%, #945f0d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 4px rgba(100, 68, 16, 0.35));
 }
 
 .name-groom {
-  background: linear-gradient(180deg, #e8b350 0%, #c48922 35%, #eab856 70%, #915d0e 100%);
+  background: linear-gradient(180deg, #e5aa3a 0%, #bd8019 45%, #945f0d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 4px rgba(100, 68, 16, 0.35));
@@ -204,9 +209,9 @@
 
 .gold-ampersand {
   font-family: 'Cinzel', serif;
-  font-size: 0.82em;
+  font-size: 0.8em;
   font-weight: 700;
-  color: #c8963e;
+  color: #b87d18;
   margin: 0 4px;
   filter: drop-shadow(0 1px 2px rgba(100, 68, 16, 0.25));
 }

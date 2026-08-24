@@ -742,17 +742,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: clamp(6px, 1.8vw, 14px);
+  gap: clamp(8px, 2vw, 16px);
   direction: rtl;
-  font-family: 'Aref Ruqaa', serif;
-  font-size: clamp(1.8rem, 5.5vw, 2.6rem);
+  font-family: 'Amiri', 'Aref Ruqaa', serif;
+  font-size: clamp(2rem, 6vw, 2.8rem);
   font-weight: 700;
-  line-height: 1;
-  padding: 0 4px;
-  background: linear-gradient(135deg, #dfb76c 0%, #f7e6b0 35%, #c8953c 65%, #946313 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 1px 3px rgba(140, 95, 30, 0.25));
+  line-height: 1.4;
+  padding: 4px 12px;
+  overflow: visible;
 }
 
 .door-person {
@@ -761,6 +758,13 @@
   justify-content: center;
   min-width: 0;
   white-space: nowrap;
+  color: #b87d18;
+  background: linear-gradient(180deg, #e5aa3a 0%, #bd8019 45%, #945f0d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(100, 68, 16, 0.35));
+  overflow: visible;
+  padding: 0 4px;
 }
 
 .door-person strong {
