@@ -24,8 +24,8 @@ export interface WeddingConfig {
 }
 
 export const WEDDING_CONFIG: WeddingConfig = {
-  groomName: 'المهندس/ مصطفى ',
-  brideName: 'الدكتورة/ أروى',
+  groomName: 'مصطفى',
+  brideName: 'أروى',
   groomFather: 'الأستاذ / أحمد مصطفى سيف النصر',
   brideFather: 'المهندس / أنور محمد عبد المجيد',
   weddingDate: '2026-10-02T19:30:00',
