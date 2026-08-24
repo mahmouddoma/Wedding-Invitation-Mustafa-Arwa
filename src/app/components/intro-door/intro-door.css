@@ -758,11 +758,6 @@
   justify-content: center;
   min-width: 0;
   white-space: nowrap;
-  color: #b87d18;
-  background: linear-gradient(180deg, #e5aa3a 0%, #bd8019 45%, #945f0d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 4px rgba(100, 68, 16, 0.35));
   overflow: visible;
   padding: 0 4px;
 }
@@ -771,6 +766,13 @@
   font: inherit;
   font-weight: 700;
   white-space: nowrap;
+  color: #b57a16;
+  background: linear-gradient(180deg, #df9f2e 0%, #b37715 50%, #8c5506 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 3px rgba(100, 68, 16, 0.4));
+  overflow: visible;
+  display: inline-block;
 }
 
 .love-rings-wrapper {
