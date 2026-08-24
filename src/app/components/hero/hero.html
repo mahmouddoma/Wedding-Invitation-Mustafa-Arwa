@@ -1,0 +1,130 @@
+<section class="hero-section">
+  <!-- Corner Ornaments -->
+  <div class="ornament ornament-top-left" #ornamentTL>
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5,75 Q5,5 75,5" fill="none" stroke="#6B7A3A" stroke-width="1.2" opacity="0.6" />
+      <path d="M10,65 Q10,15 60,15" fill="none" stroke="#6B7A3A" stroke-width="0.8" opacity="0.4" />
+      <circle cx="18" cy="18" r="3" fill="#6B7A3A" opacity="0.3" />
+      <path d="M8,30 Q12,20 22,18" fill="none" stroke="#6B7A3A" stroke-width="0.6" opacity="0.4" />
+      <ellipse
+        cx="12"
+        cy="25"
+        rx="4"
+        ry="2"
+        fill="#6B7A3A"
+        opacity="0.2"
+        transform="rotate(-40 12 25)"
+      />
+    </svg>
+  </div>
+  <div class="ornament ornament-top-right" #ornamentTR>
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M75,75 Q75,5 5,5" fill="none" stroke="#6B7A3A" stroke-width="1.2" opacity="0.6" />
+      <path d="M70,65 Q70,15 20,15" fill="none" stroke="#6B7A3A" stroke-width="0.8" opacity="0.4" />
+      <circle cx="62" cy="18" r="3" fill="#6B7A3A" opacity="0.3" />
+      <path d="M72,30 Q68,20 58,18" fill="none" stroke="#6B7A3A" stroke-width="0.6" opacity="0.4" />
+      <ellipse
+        cx="68"
+        cy="25"
+        rx="4"
+        ry="2"
+        fill="#6B7A3A"
+        opacity="0.2"
+        transform="rotate(40 68 25)"
+      />
+    </svg>
+  </div>
+  <div class="ornament ornament-bottom-left" #ornamentBL>
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5,5 Q5,75 75,75" fill="none" stroke="#6B7A3A" stroke-width="1.2" opacity="0.6" />
+      <path d="M10,15 Q10,65 60,65" fill="none" stroke="#6B7A3A" stroke-width="0.8" opacity="0.4" />
+    </svg>
+  </div>
+  <div class="ornament ornament-bottom-right" #ornamentBR>
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M75,5 Q75,75 5,75" fill="none" stroke="#6B7A3A" stroke-width="1.2" opacity="0.6" />
+      <path d="M70,15 Q70,65 20,65" fill="none" stroke="#6B7A3A" stroke-width="0.8" opacity="0.4" />
+    </svg>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="hero-content text-center">
+      <p class="hero-label" appScrollReveal>{{ config.invitationTitle }}</p>
+
+      <p class="hero-bismillah" appScrollReveal [revealDelay]="0.1">{{ config.bismillah }}</p>
+
+      <div class="hero-verse-block" appScrollReveal [revealDelay]="0.2">
+        <p class="hero-verse">{{ config.quranVerse }}</p>
+      </div>
+
+      <!-- Dove divider -->
+      <div class="dove-divider" appScrollReveal [revealDelay]="0.3">
+        <span class="divider-line"></span>
+        <img src="images/dove.png" alt="حمامة السلام" class="dove-divider-img" />
+        <span class="divider-line"></span>
+      </div>
+
+      <p class="hero-intro" appScrollReveal [revealDelay]="0.35">{{ config.invitationIntro }}</p>
+
+      <h1 class="hero-names" appScrollReveal [revealDelay]="0.4">
+        <span class="name-part">{{ config.groomName }}</span>
+        <span class="love-rings-wrapper">
+          <svg
+            class="love-rings-svg"
+            viewBox="0 0 38 28"
+            width="38"
+            height="28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="ringGoldHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F3D382" />
+                <stop offset="50%" stop-color="#C9922B" />
+                <stop offset="100%" stop-color="#8F6215" />
+              </linearGradient>
+            </defs>
+            <!-- Left Ring -->
+            <ellipse
+              cx="13.5"
+              cy="14.5"
+              rx="8.5"
+              ry="9.5"
+              stroke="url(#ringGoldHero)"
+              stroke-width="2.2"
+              transform="rotate(-15 13.5 14.5)"
+            />
+            <!-- Right Ring Intertwined -->
+            <ellipse
+              cx="24.5"
+              cy="14.5"
+              rx="8.5"
+              ry="9.5"
+              stroke="url(#ringGoldHero)"
+              stroke-width="2.2"
+              transform="rotate(15 24.5 14.5)"
+            />
+            <!-- Diamond Sparkle of Love -->
+            <path
+              d="M19 4 L20.2 7 L23 8 L20.2 9 L19 12 L17.8 9 L15 8 L17.8 7 Z"
+              fill="#FFFDF8"
+              stroke="url(#ringGoldHero)"
+              stroke-width="0.8"
+            />
+            <!-- Romantic Heart in Center -->
+            <path
+              d="M19 12.5 C18.2 11.3 16.5 11.3 15.6 12.3 C14.6 13.5 14.8 15.5 16.8 17.5 C18 18.7 19 19.7 19 19.7 C19 19.7 20 18.7 21.2 17.5 C23.2 15.5 23.4 13.5 22.4 12.3 C21.5 11.3 19.8 11.3 19 12.5 Z"
+              fill="url(#ringGoldHero)"
+            />
+          </svg>
+        </span>
+        <span class="name-part">{{ config.brideName }}</span>
+      </h1>
+
+      <p class="hero-subline" appScrollReveal [revealDelay]="0.55">
+        {{ config.invitationSubline }}
+      </p>
+    </div>
+  </div>
+</section>

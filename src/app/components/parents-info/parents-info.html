@@ -1,0 +1,26 @@
+<section class="parents-section section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <!-- Groom's Father -->
+        <div class="parent-card" appScrollReveal>
+          <h3 class="parent-label">والد العريس</h3>
+          <p class="parent-name">{{ config.groomFather }}</p>
+        </div>
+
+        <!-- Dove Divider -->
+        <div class="parents-divider" appScrollReveal [revealDelay]="0.15">
+          <span class="divider-line-sm"></span>
+          <img src="images/dove.png" alt="حمامة السلام" class="dove-mini-img" />
+          <span class="divider-line-sm"></span>
+        </div>
+
+        <!-- Bride's Father -->
+        <div class="parent-card" appScrollReveal [revealDelay]="0.2">
+          <h3 class="parent-label">والد العروسة</h3>
+          <p class="parent-name">{{ config.brideFather }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,123 @@
+:host {
+  display: block;
+}
+
+.countdown-section {
+  padding: 2rem 1rem 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-container {
+  width: min(94vw, 680px);
+  text-align: center;
+}
+
+.countdown-ornament-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.ornament-line {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184, 141, 73, 0.4), transparent);
+}
+
+.ornament-icon {
+  color: #b88d49;
+  font-size: 1.1rem;
+}
+
+.countdown-eyebrow {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+  font-weight: 700;
+  color: #b88d49;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+/* Luxury Seamless Countdown Strip */
+.countdown-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 2vw, 16px);
+  background: linear-gradient(145deg, rgba(255, 253, 249, 0.94), rgba(247, 240, 229, 0.88));
+  border: 1px solid rgba(184, 141, 73, 0.25);
+  border-radius: 28px;
+  padding: clamp(14px, 3vh, 22px) clamp(12px, 3vw, 28px);
+  box-shadow:
+    0 16px 40px rgba(76, 63, 44, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(52px, 14vw, 84px);
+  padding: 8px 4px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(184, 141, 73, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.countdown-unit:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.countdown-num {
+  font-family: 'Cinzel', 'Amiri', serif;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1;
+  color: #5f6d59; /* Sage green / deep bronze */
+  letter-spacing: 0.02em;
+}
+
+.countdown-tag {
+  font-family: var(--font-display);
+  font-size: clamp(0.78rem, 2vw, 0.95rem);
+  font-weight: 700;
+  color: #8a6038;
+  margin-top: 6px;
+}
+
+.countdown-sep {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  font-weight: 700;
+  color: rgba(184, 141, 73, 0.5);
+  line-height: 1;
+  user-select: none;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .countdown-strip {
+    padding: 12px 8px;
+    gap: 4px;
+  }
+
+  .countdown-unit {
+    min-width: 48px;
+    padding: 6px 2px;
+  }
+
+  .countdown-num {
+    font-size: 1.4rem;
+  }
+
+  .countdown-tag {
+    font-size: 0.72rem;
+  }
+}

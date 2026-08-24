@@ -1,0 +1,89 @@
+:host {
+  display: block;
+}
+
+.event-cards-section {
+  background-color: var(--color-bg);
+}
+
+.event-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-divider);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+/* Icon Wrappers — solid color backgrounds */
+.event-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-terracotta {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.icon-olive {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.icon-gold {
+  background-color: var(--color-highlight);
+  color: var(--color-white);
+}
+
+.event-label {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-text-deep);
+  margin-bottom: 0.5rem;
+}
+
+.event-value {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-deep);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.btn-location {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.btn-location:hover {
+  background-color: #A8552A;
+  transform: translateY(-1px);
+}

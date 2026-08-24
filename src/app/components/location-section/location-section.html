@@ -1,0 +1,47 @@
+<section class="location-section" appScrollReveal>
+  <div class="location-container">
+    <!-- Section Header -->
+    <div class="location-header text-center">
+      <span class="location-eyebrow">الوصول إلى مكان الحفل</span>
+      <h2 class="location-title">{{ config.venueName }}</h2>
+      <p class="location-subtitle">المعادي — كورنيش النيل، القاهرة</p>
+    </div>
+
+    <!-- Venue Card Content -->
+    <div class="location-content-grid">
+      <!-- Actions Panel -->
+      <div class="location-actions-panel">
+        <p class="location-desc">
+          يمكنكم فتح الموقع الجغرافي لقاعة <strong>Solitaire View</strong> مباشرة عبر خرائط Google أو مشاركته مع الأهل والأصدقاء.
+        </p>
+
+        <div class="location-buttons">
+          <button class="venue-btn primary-btn" (click)="openLocation()">
+            <span>فتح اللوكيشن على الخريطة</span>
+            <span class="btn-icon">⌖</span>
+          </button>
+
+          <button class="venue-btn secondary-btn" (click)="shareLocation()">
+            <span>مشاركة اللوكيشن</span>
+            <span class="btn-icon">↗</span>
+          </button>
+
+          <button class="venue-btn ghost-btn" (click)="copyLocationLink()">
+            <span>نسخ رابط اللوكيشن</span>
+            <span class="btn-icon">⧉</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- QR Code Floating Card -->
+      <div class="location-qr-panel">
+        <div class="qr-card">
+          <div class="qr-frame">
+            <img [src]="config.locationQrImage" alt="QR Code — موقع حفل الزفاف" class="qr-img" loading="lazy" />
+          </div>
+          <span class="qr-caption">امسح الكود لفتح الخريطة بهاتفك</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
