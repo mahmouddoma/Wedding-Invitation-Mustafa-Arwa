@@ -83,7 +83,7 @@ pill_x1 = (W - pill_w) // 2
 pill_y1 = 345
 draw.rounded_rectangle([pill_x1, pill_y1, pill_x1 + pill_w, pill_y1 + pill_h], radius=30, fill='#f4f8fc', outline='#d4b47e', width=2)
 
-details_text = 'الجمعة، 2 أكتوبر 2026   •   الساعة 7:30 مساءً   •   Solitaire View Maadi'
+details_text = 'الجمعة، 2 أكتوبر 2026   •   الساعة 7:30 مساءً   •   دريم جاردن (تاليا) بنادي ضباط القوات المسلحة'
 draw_centered_text(pill_y1 + 17, details_text, font_details, fill_color='#2c4257')
 
 # 5. Closing greeting

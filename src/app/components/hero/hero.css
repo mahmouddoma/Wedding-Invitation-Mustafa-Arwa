@@ -282,6 +282,14 @@
   gap: 4px;
 }
 
+a.trio-item,
+.trio-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .trio-icon {
   color: #c8963e;
   display: flex;

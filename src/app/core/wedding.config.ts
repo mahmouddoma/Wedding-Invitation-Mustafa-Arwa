@@ -30,9 +30,9 @@ export const WEDDING_CONFIG: WeddingConfig = {
   brideFather: 'أ / أنور محمد عبد المجيد',
   weddingDate: '2026-10-02T19:30:00',
   weddingTime: 'الساعة 7:30 مساءً',
-  venueName: 'Solitaire View Maadi',
-  locationUrl: 'https://maps.app.goo.gl/CBHDohEnQavvzwNPA?g_st=ac',
-  locationQrImage: 'location.jpeg',
+  venueName: 'دريم جاردن (تاليا) بنادي ضباط القوات المسلحة',
+  locationUrl: 'https://maps.app.goo.gl/pHf7JHsT5c84VCvs9?g_st=aw',
+  locationQrImage: 'qrcode_399260104_c7930ad1328dc1da7504b1f5e97244a5.png',
   invitationTitle: 'دعوة زفاف',
   bismillah: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ',
   quranVerse:
