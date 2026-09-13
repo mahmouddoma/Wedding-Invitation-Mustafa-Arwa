@@ -93,7 +93,7 @@ export class ShareService {
       try {
         await navigator.share({
           title: `موقع حفل زفاف ${WEDDING_CONFIG.groomName} و ${WEDDING_CONFIG.brideName}`,
-          text: `موقع الحفل — ${WEDDING_CONFIG.venueName}`,
+          text: `موقع الحفل — ${WEDDING_CONFIG.venueName}، ${WEDDING_CONFIG.venueAddress}`,
           url: WEDDING_CONFIG.locationUrl,
         });
       } catch {

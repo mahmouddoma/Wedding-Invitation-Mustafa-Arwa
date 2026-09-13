@@ -7,7 +7,6 @@ import { WEDDING_CONFIG } from '../wedding.config';
  */
 @Injectable({ providedIn: 'root' })
 export class IcsService {
-
   /** Generate and download the .ics file */
   downloadIcs(): void {
     const icsContent = this.generateIcs();
@@ -28,7 +27,10 @@ export class IcsService {
     const endDate = new Date(startDate.getTime() + 4 * 60 * 60 * 1000); // 4-hour event
 
     const formatDate = (d: Date): string => {
-      return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+      return d
+        .toISOString()
+        .replace(/[-:]/g, '')
+        .replace(/\.\d{3}/, '');
     };
 
     const now = new Date();
@@ -45,8 +47,8 @@ export class IcsService {
       `DTSTAMP:${formatDate(now)}`,
       `UID:wedding-${WEDDING_CONFIG.groomName}-${WEDDING_CONFIG.brideName}@invitation`,
       `SUMMARY:حفل زفاف ${WEDDING_CONFIG.groomName} و ${WEDDING_CONFIG.brideName}`,
-      `DESCRIPTION:يتشرف الأهل بدعوتكم لحضور حفل زفاف ${WEDDING_CONFIG.groomName} و ${WEDDING_CONFIG.brideName}`,
-      `LOCATION:${WEDDING_CONFIG.venueName}`,
+      `DESCRIPTION:يتشرف الأهل بدعوتكم لحضور حفل زفاف ${WEDDING_CONFIG.groomName} و ${WEDDING_CONFIG.brideName}\\n📍 ${WEDDING_CONFIG.venueName}\\n🗺️ ${WEDDING_CONFIG.venueAddress}`,
+      `LOCATION:${WEDDING_CONFIG.venueName}\, ${WEDDING_CONFIG.venueAddress}`,
       `URL:${WEDDING_CONFIG.locationUrl}`,
       'STATUS:CONFIRMED',
       'BEGIN:VALARM',

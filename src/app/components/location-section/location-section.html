@@ -4,7 +4,7 @@
     <div class="location-header text-center">
       <span class="location-eyebrow">الوصول إلى مكان الحفل</span>
       <h2 class="location-title">{{ config.venueName }}</h2>
-      <p class="location-subtitle">القاهرة — نادي ضباط القوات المسلحة</p>
+      <p class="location-subtitle">{{ config.venueAddress }}</p>
     </div>
 
     <!-- Venue Card Content -->
@@ -12,8 +12,8 @@
       <!-- Actions Panel -->
       <div class="location-actions-panel">
         <p class="location-desc">
-          يمكنكم فتح الموقع الجغرافي لقاعة <strong>{{ config.venueName }}</strong> مباشرة عبر خرائط
-          Google أو مشاركته مع الأهل والأصدقاء.
+          يمكنكم فتح الموقع الجغرافي لقاعة <strong>{{ config.venueName }}</strong>،
+          <strong>{{ config.venueAddress }}</strong>، مباشرة عبر خرائط Google أو مشاركته مع الأهل والأصدقاء.
         </p>
 
         <div class="location-buttons">
